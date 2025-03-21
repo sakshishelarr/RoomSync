@@ -32,7 +32,7 @@ document.querySelector('form').addEventListener('submit', async function (event)
     const result = await response.json();
     if (response.status === 200) {
       localStorage.setItem("token", result.token);  // Store token in localStorage
-      window.location.href = "/RoomSync/frontend/roomlisting.html";  // Redirect to room listings
+      window.location.href = "RoomSync/roomlisting.html";  // Redirect to room listings
     } else {
       alert(result.message); // Show error message from backend
     }
