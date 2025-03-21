@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Listings | RoomSync</title>
+    <link rel="stylesheet" href="roomlisting.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- Logo - Left -->
+        <div class="logo">
+            <img src="images/logo.png" alt="RoomSync Logo">
+            <span>RoomSync</span>
+        </div>
+    
+        <!-- Centered Navigation Links -->
+        <div class="nav-links">
+            <a href="#">Rooms</a>
+            <a href="#">Roommates</a>
+        </div>
+    
+        <!-- Login & Signup Buttons - Right -->
+        <div class="auth-buttons">
+            <a href="#why-use-roomsync" class="about-link">About Us</a>
+            <button class="login-btn">Log in</button>
+            <button class="signup-btn">Sign up</button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Find Your Ideal Room</h1>
+        <p>Browse through available rooms and choose the best fit for you!</p>
+    </header>
+
+    <!-- Filters Section -->
+    <div class="filters-container">
+        <!-- Location Filter -->
+        <div class="filter-group">
+            <i class="fas fa-search"></i> 
+            <input type="text" id="locationFilter" placeholder="Enter city or neighborhood..." onkeyup="filterRooms()">
+        </div>
+
+        <!-- Budget Filter -->
+        <div class="filter-group">
+            <i class="fas fa-dollar-sign"></i>
+            <select id="budgetFilter" onchange="filterRooms()">
+                <option value="">Budget</option>
+                <option value="0-2000">$0 - $2,000</option>
+                <option value="2000-4000">$2,000 - $4,000</option>
+                <option value="4000-6000">$4,000 - $6,000</option>
+                <option value="6000+">$6,000+</option>
+            </select>
+        </div>
+
+        <!-- Type Filter -->
+        <div class="filter-group">
+            <i class="fas fa-home"></i>
+            <select id="typeFilter" onchange="filterRooms()">
+                <option value="">Type</option>
+                <option value="Private Room">Private Room</option>
+                <option value="Entire Place">Entire Place</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Room Listings Grid -->
+    <section class="room-listings-grid">
+        <!-- Example Room Cards (Add more dynamically using JavaScript) -->
+        <div class="room-card" data-city="NoMad, Manhattan" data-budget="1900" data-type="Private Room" onclick="window.location.href='room-detail.html?room=brent'">
+            <div class="room-name">Brent, 39</div>
+            <div class="room-image-container">
+                <img src="images/brent1.jpeg" alt="Brent's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$1,900 / mo</p>
+                <p class="type">Private Room · 6 Bedrooms · Apartment</p>
+                <p class="location">Location: NoMad, Manhattan</p>
+            </div>
+        </div>
+
+        <div class="room-card" data-city="East Village, Manhattan" data-budget="2050" data-type="Private Room" onclick="window.location.href='room-detail.html?room=maurice'">
+            <div class="room-name">Maurice, 32</div>
+            <div class="room-image-container">
+                <img src="images/maurice1.jpeg" alt="Maurice's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$2,050 / mo</p>
+                <p class="type">Private Room · 3 Bedrooms · Apartment</p>
+                <p class="location">Location: East Village, Manhattan</p>
+            </div>
+        </div>
+
+        <div class="room-card" data-city="Upper East Side, Manhattan" data-budget="3150" data-type="Entire Place" onclick="window.location.href='room-detail.html?room=sydney'">
+            <div class="room-name">Sydney, 29</div>
+            <div class="room-image-container">
+                <img src="images/sydney1.jpeg" alt="Sydney's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$3,150 / mo</p>
+                <p class="type">Entire Place · 1 Bedroom · Apartment</p>
+                <p class="location">Location: Upper East Side, Manhattan</p>
+            </div>
+        </div>
+
+        <div class="room-card" data-city="Crown Heights, Brooklyn" data-budget="1400" data-type="Private Room" onclick="window.location.href='room-detail.html?room=ivana'">
+            <div class="room-name">Ivana, 30</div>
+            <div class="room-image-container">
+                <img src="images/ivana1.jpeg" alt="Ivana's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$1,400 / mo</p>
+                <p class="type">Private Room · 4 Bedrooms · Apartment</p>
+                <p class="location">Location: Crown Heights, Brooklyn</p>
+            </div>
+        </div>
+
+        <!-- Add more room cards here -->
+    </section>
+
+    <!-- No Rooms Message -->
+    <p id="noRoomsMessage" style="display: none; text-align: center; color: #ff4d4d; font-size: 1.2rem; margin-top: 10px;">
+        ❌ No rooms found.
+    </p>
+
+    <script src="./roomlisting.js"></script>
+</body>
+</html>

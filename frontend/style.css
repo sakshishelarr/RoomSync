@@ -1,0 +1,627 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box; /* Prevents elements from expanding beyond their container */
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    width: 100%;
+    position: relative;
+    background-color: white;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between icon & text */
+}
+
+.logo img {
+    height: 40px;
+}
+
+.logo span {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
+/* Style for Nav Links */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Spacing between links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 5px; /* Creates space for the underline */
+}
+
+/* Underline Effect */
+.nav-links a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(to right, #000a14, #0681a3); /* Gradient color */
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Expand on Hover */
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* Login & Signup Buttons - Right */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* About Link Styling - Same as Rooms & Roommates */
+.about-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+
+.login-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-btn {
+    background: linear-gradient(to right, #000a14, #0681a3);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hover Effects */
+.signup-btn:hover {
+    transform: scale(1.05);
+}
+
+.search-bar:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .search-bar {
+        width: 90%;
+        justify-content: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 30px;
+}
+
+/* Ensures Text & Image Are Side by Side */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1500px;
+}
+
+/* Left Side: Hero Text */
+.hero-text {
+    width: 50%;
+    max-width: 750px;
+    top: -100px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    background: linear-gradient(to right, #000a14, #0681a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0px;
+    width: 800px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: black;
+}
+
+/* Right Side: Image */
+/* Right Side: Image */
+.hero-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;  /* Ensures proper movement */
+    right: -10px;  /* Moves image 150px to the right */
+    max-width: 550px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 550px;
+    border-radius: 15px;
+}
+
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: none;
+        padding: 20px;
+    }
+
+    .hero-image {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+    }
+}
+
+/* CTA Links Container */
+.cta-links {
+    display: flex;
+    gap: 15px; /* Adds spacing between links */
+    margin-top: 20px;
+}
+
+/* General CTA Button Styling */
+.cta-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap; /* Prevents text from breaking */
+}
+
+/* ✅ Verify a Roommate */
+.cta-links a:first-child {
+    background: linear-gradient(to right, #000a14, #0681a3);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 10px;
+}
+
+.cta-links a:first-child:hover {
+    transform: scale(1.05);
+}
+
+/* 📢 Post my open room - for free */
+.cta-links a:last-child {
+    background: linear-gradient(to right, #000a14, #0681a3);
+    color: white;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cta-links a:last-child:hover {
+    transform: scale(1.05);
+}
+
+/* Features Section */
+
+.features-heading::before {
+    content: "";
+    display: block;
+    width: 100%; /* Length of the line */
+    height: 1.5px; /* Thickness */
+    background-color: grey;
+    margin: 0 auto 50px auto; /* Center the line with spacing below */
+    border-radius: 2px;
+}
+/* Heading Styling */
+.features-heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+    margin-top: 100px;
+    background: linear-gradient(to right, #000a14, #0681a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.features-section {
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 30px 100px;
+    background-color: white; /* Match background */
+}
+
+.feature {
+    width: 30%;
+    padding: 20px;
+}
+
+.feature img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.feature h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: linear-gradient(to right, #000a14, #0681a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .features {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .feature {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+/* About Us Section */
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 0px;
+    background-color: #ffffff;
+    position: relative; /* Ensures positioning for the line */
+}
+
+/* Grey Line Above "About Us" (Shifted 50px Down) */
+.about-us::before {
+    content: "";
+    display: block;
+    width: 100%; /* Full-width */
+    height: 1.5px; /* Thickness */
+    background-color: grey;
+    position: absolute;
+    top: 50px; /* Shifted 50px down */
+    left: 0;
+}
+
+/* About Us Content */
+.about-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Left Side: Big Image */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+}
+
+/* Right Side: Text */
+.about-text {
+    flex: 1;
+    padding-left: 50px;
+    text-align: left;
+
+}
+
+.about-text h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 100px;
+    background: linear-gradient(to right, #000a14, #0681a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+}
+
+/* FAQ Section */
+.faq-section {
+    text-align: center;
+    padding: 50px 100px;
+    background-color: #ffffff;
+    width: 100%; /* Ensures full width */
+    max-width: 100vw; /* Ensures it does not exceed the viewport width */
+    margin: 0 auto; /* Centers the section */
+    position: relative; /* Required for positioning the line */
+}
+
+
+/* Grey Line Above FAQ Section */
+.faq-section::before {
+    content: "";
+    display: block;
+    width: 100%; /* Full-width */
+    height: 1.5px; /* Thickness */
+    background-color: grey;
+    position: absolute;
+    top: 0; /* Moves the line 50px above the section */
+    left: 0;
+}
+
+/* FAQ Heading */
+.faq-heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #000a14, #0681a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    position: relative;
+}
+
+
+/* FAQ Container */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* FAQ Item */
+.faq-item {
+    background: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(219, 219, 219, 0.1);
+}
+
+/* FAQ Question */
+.faq-question {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.faq-question:hover {
+    background: #f0f0f0;
+}
+
+/* FAQ Answer */
+.faq-answer {
+    display: none;
+    padding: 15px;
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+    border-top: 1px solid #ddd;
+}
+
+/* Toggle Symbol */
+.faq-toggle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* FAQ Expanded */
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+/* Footer Styles */
+.footer {
+    background: #000a14;
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Footer Columns */
+.footer-about,
+.footer-links,
+.footer-support,
+.footer-social {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* Links */
+.footer-links ul,
+.footer-support ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li,
+.footer-support ul li {
+    margin: 8px 0;
+}
+
+.footer-links a,
+.footer-support a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover,
+.footer-support a:hover {
+    color: #0681a3;
+}
+
+/* Social Media */
+.footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.footer-social .social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social .social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #eaeaea20;
+}
+
+.footer-bottom p {
+    margin: 0;
+}

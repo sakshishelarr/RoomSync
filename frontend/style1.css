@@ -1,0 +1,355 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('images/background.jpg') no-repeat center center/cover;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.logo span {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Underline Effect */
+.nav-links a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(to right, #000a14, #0681a3);
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+.login-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #333;
+}
+
+/* Centering Authentication Form */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+/* Authentication Box */
+.auth-box {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+    width: 720px;
+    text-align: center;
+}
+
+/* Sign Up Heading */
+.auth-box h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Google Sign-Up Button */
+.google-signup-btn {
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.google-signup-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* OR Divider */
+.or-divider {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Form Row */
+.form-row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* Input Groups */
+.input-group {
+    text-align: left;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    background: #f9f9f9;
+    color: #333;
+    transition: border 0.3s ease-in-out;
+}
+
+/* Fix for different text colors */
+.input-group input::placeholder,
+.input-group select {
+    color: #666;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #0681a3;
+    box-shadow: 0px 0px 5px rgba(6, 129, 163, 0.5);
+}
+
+/* Password Field Full Width */
+.password-container {
+    width: 100%;
+}
+
+/* Dropdown Styling */
+.input-group select {
+    appearance: none;
+    background-image: url('images/dropdown-arrow.png');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 35px;
+}
+
+/* Submit Button */
+.auth-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(to right, #000a14, #0681a3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.4s;
+}
+
+.auth-btn:hover {
+    transform: scale(1.02);
+}
+
+/* Links */
+.auth-box p {
+    margin-top: 15px;
+    color: #333;
+}
+
+.auth-box a {
+    text-decoration: none;
+    color: #0681a3;
+    font-weight: 600;
+}
+
+.auth-box a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+.footer {
+    background: #000a14;
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Footer Columns */
+.footer-about,
+.footer-links,
+.footer-support,
+.footer-social {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* Links */
+.footer-links ul,
+.footer-support ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li,
+.footer-support ul li {
+    margin: 8px 0;
+}
+
+.footer-links a,
+.footer-support a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover,
+.footer-support a:hover {
+    color: #0681a3;
+}
+
+/* Social Media */
+.footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.footer-social .social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social .social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #eaeaea20;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
