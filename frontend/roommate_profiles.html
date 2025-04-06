@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roommate Profiles | RoomSync</title>
+    <link rel="stylesheet" href="roommates.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- Logo - Left -->
+        <div class="logo">
+            <img src="images/logo.png" alt="RoomSync Logo">
+            <span>RoomSync</span>
+        </div>
+    
+        <!-- Centered Navigation Links -->
+        <div class="nav-links">
+            <a href="roomlisting.html">Rooms</a>
+            <a href="roommate_profiles.html">Roommates</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Find Your Ideal Roommate</h1>
+        <p>Browse through profiles and find someone who matches your vibe!</p>
+    </header>
+
+    <!-- Filters Section -->
+    <!-- Filters Section -->
+    <div class="filters-container">
+        
+        <!-- Location Filter -->
+        <div class="filter-group">
+            <i class="fas fa-search"></i> 
+            <input type="text" id="locationFilter" placeholder="Enter city name..." onkeyup="filterProfiles()">
+        </div>
+
+        <!-- Age Filter -->
+        <div class="filter-group">
+            <i class="fas fa-hashtag"></i>
+            <select id="ageFilter" onchange="filterProfiles()">
+                <option value="">Age</option>
+                <option value="18-22">18-22</option>
+                <option value="23-27">23-27</option>
+                <option value="28-35">28-35</option>
+                <option value="35+">35+</option>
+            </select>
+        </div>
+
+        <!-- Budget Filter -->
+        <div class="filter-group">
+            <i class="fas fa-dollar-sign"></i>
+            <select id="budgetFilter" onchange="filterProfiles()">
+                <option value="">Budget</option>
+                <option value="0-5000">$0 - $5000</option>
+                <option value="5000-10000">$5000 - $10,000</option>
+                <option value="10000-15000">$10,000 - $15,000</option>
+                <option value="15000+">$15,000+</option>
+            </select>
+        </div>
+
+
+        <button class="clear-filters-btn">Clear Filters</button>
+    </div>
+
+    <!-- Roommate Profiles Grid -->
+    <section class="profiles-grid">
+        <!-- Mumbai Profiles -->
+        <div class="profile-card" data-city="Mumbai" data-age="24" data-budget="600" onclick="openProfile(
+            'Ayesha', 24, 'Mumbai', 'Graphic Designer', 'Night Owl', 'Vegan', 'No Pets', 
+            '$600/mo', 'Looking for a peaceful place', 'Creativity, Yoga, Reading', 'Hates loud music', 
+            'images/ayesha1.jpg', 'images/ayesha2.jpg', 'images/ayesha3.jpg', 'images/ayesha4.jpg')">
+            <img src="images/ayesha1.jpg" alt="Ayesha">
+            <h3>Ayesha, 24</h3>
+            <p>Mumbai</p>
+        </div>
+
+
+        <div class="profile-card" data-city="Mumabai" data-age="26" data-budget="700" onclick="openProfile(
+            'Rahul', 26, 'Mumbai', 'Software Engineer', 'Early Bird', 'Non-Veg', 'Dog Lover', 
+            '$700/mo', 'Prefers a clean & organized home', 'Creativity, Yoga, Reading', 'Hates loud music',
+            'images/rahul1.jpg', 'images/rahul2.jpg', 'images/rahul3.jpg', 'images/rahul4.jpg')">
+            <img src="images/rahul1.jpg" alt="Rahul">
+            <h3>Rahul, 26</h3>
+            <p>Mumbai</p>
+        </div>
+
+        
+        <!-- Pune Profiles -->
+        <div class="profile-card" data-city="Pune" data-age="23" data-budget="500" onclick="openProfile(
+            'Sanya', 23, 'Pune', 'Fashion Designer', 'Night Owl', 'Vegetarian', 'No Pets', 
+            '$500/mo', 'Loves socializing and weekend trips', 'Creativity, Yoga, Reading', 'Hates loud music',
+            'images/sanya1.jpg', 'images/sanya2.jpg', 'images/sanya3.jpg', 'images/sanya4.jpg')">
+            <img src="images/sanya1.jpg" alt="Sanya">
+            <h3>Sanya, 23</h3>
+            <p>Pune</p>
+        </div>
+
+        <div class="profile-card" data-city="Pune" data-age="28" data-budget="650" onclick="openProfile(
+            'Vikram', 28, 'Pune', 'Data Analyst', 'Early Bird', 'Non-Veg', 'Owns a Cat', 
+            '$650/mo', 'Quiet & independent, prefers privacy','Creativity, Yoga, Reading', 'Hates loud music',
+            'images/vikram1.jpg', 'images/vikram2.jpg', 'images/vikram3.jpg', 'images/vikram4.jpg')">
+            <img src="images/vikram1.jpg" alt="Vikram">
+            <h3>Vikram, 28</h3>
+            <p>Pune</p>
+        </div>
+
+        <div class="profile-card" data-city="Pune" data-age="28" data-budget="650" onclick="openProfile(
+            'Vikram', 28, 'Pune', 'Data Analyst', 'Early Bird', 'Non-Veg', 'Owns a Cat', 
+            '$650/mo', 'Quiet & independent, prefers privacy','Creativity, Yoga, Reading', 'Hates loud music',
+            'images/vikram1.jpg', 'images/vikram2.jpg', 'images/vikram3.jpg', 'images/vikram4.jpg')">
+            <img src="images/vikram1.jpg" alt="Vikram">
+            <h3>Vikram, 28</h3>
+            <p>Pune</p>
+        </div>
+
+        <div class="profile-card" data-city="Mumbai" data-age="24" data-budget="600" onclick="openProfile(
+            'Ayesha', 24, 'Mumbai', 'Graphic Designer', 'Night Owl', 'Vegan', 'No Pets', 
+            '$600/mo', 'Looking for a peaceful place', 'Creativity, Yoga, Reading', 'Hates loud music', 
+            'images/ayesha1.jpg', 'images/ayesha2.jpg', 'images/ayesha3.jpg', 'images/ayesha4.jpg')">
+            <img src="images/ayesha1.jpg" alt="Ayesha">
+            <h3>Ayesha, 24</h3>
+            <p>Mumbai</p>
+        </div>
+
+        <div class="profile-card" data-city="Mumbai" data-age="26" data-budget="700" onclick="openProfile(
+            'Rahul', 26, 'Mumbai', 'Software Engineer', 'Early Bird', 'Non-Veg', 'Dog Lover', 
+            '$700/mo', 'Prefers a clean & organized home', 'Creativity, Yoga, Reading', 'Hates loud music',
+            'images/rahul1.jpg', 'images/rahul2.jpg', 'images/rahul3.jpg', 'images/rahul4.jpg')">
+            <img src="images/rahul1.jpg" alt="Rahul">
+            <h3>Rahul, 26</h3>
+            <p>Mumbai</p>
+        </div>
+
+        <div class="profile-card" data-city="Pune" data-age="23" data-budget="500" onclick="openProfile(
+            'Sanya', 23, 'Pune', 'Fashion Designer', 'Night Owl', 'Vegetarian', 'No Pets', 
+            '$500/mo', 'Loves socializing and weekend trips', 'Creativity, Yoga, Reading', 'Hates loud music',
+            'images/sanya1.jpg', 'images/sanya2.jpg', 'images/sanya3.jpg', 'images/sanya4.jpg')">
+            <img src="images/sanya1.jpg" alt="Sanya">
+            <h3>Sanya, 23</h3>
+            <p>Pune</p>
+        </div>
+
+        <div class="profile-card" data-city="Pune" data-age="23" data-budget="500" onclick="openProfile(
+            'Sanya', 23, 'Pune', 'Fashion Designer', 'Night Owl', 'Vegetarian', 'No Pets', 
+            '$500/mo', 'Loves socializing and weekend trips', 'Creativity, Yoga, Reading', 'Hates loud music',
+            'images/sanya1.jpg', 'images/sanya2.jpg', 'images/sanya3.jpg', 'images/sanya4.jpg')">
+            <img src="images/sanya1.jpg" alt="Sanya">
+            <h3>Sanya, 23</h3>
+            <p>Pune</p>
+        </div>
+
+        <div class="profile-card" data-city="Pune" data-age="28" data-budget="650" onclick="openProfile(
+            'Vikram', 28, 'Pune', 'Data Analyst', 'Early Bird', 'Non-Veg', 'Owns a Cat', 
+            '$650/mo', 'Quiet & independent, prefers privacy','Creativity, Yoga, Reading', 'Hates loud music',
+            'images/vikram1.jpg', 'images/vikram2.jpg', 'images/vikram3.jpg', 'images/vikram4.jpg')">
+            <img src="images/vikram1.jpg" alt="Vikram">
+            <h3>Vikram, 28</h3>
+            <p>Pune</p>
+        </div>
+
+        <div class="profile-card" data-city="Mumabai" data-age="26" data-budget="700" onclick="openProfile(
+            'Rahul', 26, 'Mumbai', 'Software Engineer', 'Early Bird', 'Non-Veg', 'Dog Lover', 
+            '$700/mo', 'Prefers a clean & organized home', 'Creativity, Yoga, Reading', 'Hates loud music',
+            'images/rahul1.jpg', 'images/rahul2.jpg', 'images/rahul3.jpg', 'images/rahul4.jpg')">
+            <img src="images/rahul1.jpg" alt="Rahul">
+            <h3>Rahul, 26</h3>
+            <p>Mumbai</p>
+        </div>
+
+        <div class="profile-card" data-city="Mumbai" data-age="24" data-budget="600" onclick="openProfile(
+            'Ayesha', 24, 'Mumbai', 'Graphic Designer', 'Night Owl', 'Vegan', 'No Pets', 
+            '$600/mo', 'Looking for a peaceful place', 'Creativity, Yoga, Reading', 'Hates loud music', 
+            'images/ayesha1.jpg', 'images/ayesha2.jpg', 'images/ayesha3.jpg', 'images/ayesha4.jpg')">
+            <img src="images/ayesha1.jpg" alt="Ayesha">
+            <h3>Ayesha, 24</h3>
+            <p>Mumbai</p>
+        </div>
+
+        
+
+        <!-- Add 8 More Profiles Here -->
+    </section>
+
+    <!-- No Users Message -->
+    <p id="noUsersMessage" style="display: none; text-align: center; color: #ff4d4d; font-size: 1.2rem; margin-top: 10px;">
+        ❌ No users found.
+    </p>
+
+        <!-- Profile Modal (Portrait View Like Dating Apps) -->
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeProfile()">&times;</span>
+
+            <!-- Profile Content -->
+            <div class="profile-container">
+                <!-- Image Section -->
+                <div class="profile-image">
+                    <img id="profile-img" src="" alt="Profile Image">
+                </div>
+
+                <!-- Info Section -->
+                <div class="profile-info">
+                    <h2 id="profile-name"></h2>
+                    <p id="profile-age-city"></p>
+
+                    <!-- Introduction Section -->
+                    <div class="profile-section">
+                        <h3>Introduction</h3>
+                        <p id="profile-introduction">Hello, I am Alex. I am 25 years old and I am looking for a roommate who enjoys a peaceful and creative environment. I am a night owl and prefer a vegetarian diet. I value clean living spaces and enjoy spending time reading and exploring new hobbies.</p>
+                    </div>
+
+                    <div class="profile-details">
+                        <!-- Left Column -->
+                        <div class="profile-left">
+                            <div class="profile-section">
+                                <h3>📌 Occupation</h3>
+                                <p id="profile-occupation"></p>
+                            </div>
+
+                            <div class="profile-section">
+                                <h3>🌙 Sleeping Habit</h3>
+                                <p id="profile-sleep"></p>
+                            </div>
+
+                            <div class="profile-section">
+                                <h3>🍽️ Dietary Preference</h3>
+                                <p id="profile-diet"></p>
+                            </div>
+                        </div>
+
+                        <!-- Right Column -->
+                        <div class="profile-right">
+                            <div class="profile-section">
+                                <h3>🐶 Pet Preference</h3>
+                                <p id="profile-pets"></p>
+                            </div>
+
+                            <div class="profile-section">
+                                <h3>💰 Budget</h3>
+                                <p id="profile-budget"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Start a Chat Button -->
+                    <!-- Like and Cross Buttons -->
+                    <div class="like-skip">
+                        <button class="cross-btn">Dislike</button>
+                        <button class="like-btn" onclick="likeProfile()">Like</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+            <h3>RoomSync</h3>
+            <p>Find the perfect home and roommate with our AI-driven matching system. Safe, fast, and stress-free.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Rooms</a></li>
+                <li><a href="#">Roommates</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Support Section -->
+        <div class="footer-support">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Safety Tips</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="/RoomSync/frontend/images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="/RoomSync/frontend/images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="/RoomSync/frontend/images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="frontend/images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 RoomSync. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+    <script src="roommates.js"></script>
+</body>
+</html>
+
+

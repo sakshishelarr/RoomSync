@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | RoomSync</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+   <!-- Navbar -->
+   <nav class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" alt="RoomSync Logo">
+        <span>RoomSync</span>
+    </div>
+
+    <div class="auth-buttons">
+        <a href="#why-use-roomsync" class="about-link">About Us</a>
+        <button onclick="window.location.href='login.html'" class="login-btn">Log in</button>
+    </div>
+</nav>
+
+<!-- Sign Up Page -->
+<div class="auth-container">
+  <div class="auth-box">
+      <h1>Sign Up</h1>
+      
+      <!-- Google Sign-Up -->
+      <button class="google-signup-btn">
+          <img src="images/google.png" alt="Google Logo">
+          Sign up with Google
+      </button>
+
+      <p class="or-divider">OR</p>
+
+      <form id="signupForm">
+          <div class="form-row">
+              <div class="input-group">
+                  <label for="full-name">Full Name</label>
+                  <input type="text" id="full-name" placeholder="Enter your full name" required>
+              </div>
+
+              <div class="input-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="Enter your email" required>
+              </div>
+          </div>
+
+          <div class="form-row">
+              <div class="input-group password-container">
+                  <label for="password">Password</label>
+                  <input type="password" id="password" placeholder="Enter your password" required>
+              </div>
+
+              <div class="input-group">
+                  <label for="state">State</label>
+                  <select id="state" onchange="updateCities()">
+                      <option value="">Select State</option>
+                      <option value="andhra-pradesh">Andhra Pradesh</option>
+                      <option value="arunachal-pradesh">Arunachal Pradesh</option>
+                      <option value="assam">Assam</option>
+                      <option value="bihar">Bihar</option>
+                      <option value="chhattisgarh">Chhattisgarh</option>
+                      <option value="goa">Goa</option>
+                      <option value="gujarat">Gujarat</option>
+                      <option value="haryana">Haryana</option>
+                      <option value="himachal-pradesh">Himachal Pradesh</option>
+                      <option value="jharkhand">Jharkhand</option>
+                      <option value="karnataka">Karnataka</option>
+                      <option value="kerala">Kerala</option>
+                      <option value="madhya-pradesh">Madhya Pradesh</option>
+                      <option value="maharashtra">Maharashtra</option>
+                      <option value="manipur">Manipur</option>
+                      <option value="meghalaya">Meghalaya</option>
+                      <option value="mizoram">Mizoram</option>
+                      <option value="nagaland">Nagaland</option>
+                      <option value="odisha">Odisha</option>
+                      <option value="punjab">Punjab</option>
+                      <option value="rajasthan">Rajasthan</option>
+                      <option value="sikkim">Sikkim</option>
+                      <option value="tamil-nadu">Tamil Nadu</option>
+                      <option value="telangana">Telangana</option>
+                      <option value="tripura">Tripura</option>
+                      <option value="uttar-pradesh">Uttar Pradesh</option>
+                      <option value="uttarakhand">Uttarakhand</option>
+                      <option value="west-bengal">West Bengal</option>
+                  </select>
+              </div>
+
+              <div class="input-group">
+                  <label for="city">City</label>
+                  <select id="city">
+                      <option value="">Select City</option>
+                  </select>
+              </div>
+          </div>
+
+          <button type="submit" class="auth-btn">Sign Up</button>
+          <p>Already have an account? <a href="login.html">Log in</a></p>
+      </form>
+  </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+            <h3>RoomSync</h3>
+            <p>Find the perfect home and roommate with our AI-driven matching system. Safe, fast, and stress-free.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Rooms</a></li>
+                <li><a href="#">Roommates</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Support Section -->
+        <div class="footer-support">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Safety Tips</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 RoomSync. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script1.js"></script>
+</body>
+</html>

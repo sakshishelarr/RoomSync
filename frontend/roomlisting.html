@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Listings | RoomSync</title>
+    <link rel="stylesheet" href="roomlisting.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- Logo - Left -->
+        <div class="logo">
+            <img src="images/logo.png" alt="RoomSync Logo">
+            <span>RoomSync</span>
+        </div>
+    
+        <!-- Centered Navigation Links -->
+        <div class="nav-links">
+            <a href="roomlisting.html">Rooms</a>
+            <a href="roommate_profiles.html">Roommates</a>
+        </div>
+    
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Find Your Ideal Room</h1>
+        <p>Browse through available rooms and choose the best fit for you!</p>
+    </header>
+
+    <!-- Filters Section -->
+    <div class="filters-container">
+        <!-- Location Filter -->
+        <div class="filter-group">
+            <i class="fas fa-search"></i> 
+            <input type="text" id="locationFilter" placeholder="Enter city or neighborhood..." onkeyup="filterRooms()">
+        </div>
+
+        <!-- Budget Filter -->
+        <div class="filter-group">
+            <i class="fas fa-dollar-sign"></i>
+            <select id="budgetFilter" onchange="filterRooms()">
+                <option value="">Budget</option>
+                <option value="0-2000">$0 - $2,000</option>
+                <option value="2000-4000">$2,000 - $4,000</option>
+                <option value="4000-6000">$4,000 - $6,000</option>
+                <option value="6000+">$6,000+</option>
+            </select>
+        </div>
+
+        <!-- Type Filter -->
+    <div class="filter-group">
+        <i class="fas fa-home"></i>
+        <select id="typeFilter" onchange="filterRooms()">
+            <option value="">Type</option>
+            <option value="Private Room">Private Room</option>
+            <option value="Entire Place">Entire Place</option>
+        </select>
+    </div>
+
+    <!-- Add this button inside the filters section -->
+<button class="clear-filters-btn">Clear Filters</button>
+
+</div>
+
+       <!-- Room Listings Grid -->
+    <section class="room-listings-grid">
+        <!-- Example Room Cards -->
+        <div class="room-card" data-city="NoMad, Mumbai" data-budget="1900" data-type="Private Room" onclick="window.location.href='room-detail.html?room=Tejas&price=1,900&city=Mumbai'">
+            <div class="room-name">
+                <div class="user-profile">
+                    <img src="images/ayesha1.jpg" alt="Brent's Profile Photo" class="profile-img">
+                </div>
+                <h3>Tejas, 39</h3>
+            </div>
+            <div class="room-image-container">
+                <img src="images/brent1.jpeg" alt="Brent's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$1,900 / mo</p>
+                <p class="type">Private Room · 6 Bedrooms · Apartment</p>
+                <div class="location">
+                    <p>NoMad, Mumbai</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="room-card" data-city="East Village, Mumbai" data-budget="2050" data-type="Private Room" onclick="window.location.href='room-detail.html?room=Ojasvee&price=2,050&city=Mumbai'">
+            <div class="room-name">
+                <div class="user-profile">
+                    <img src="images/rahul2.jpg" alt="Maurice's Profile Photo" class="profile-img">
+                </div>
+                <h3>Ojasvee, 32</h3>
+            </div>
+            <div class="room-image-container">
+                <img src="images/maurice1.jpeg" alt="Maurice's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$2,050 / mo</p>
+                <p class="type">Private Room · 3 Bedrooms · Apartment</p>
+                <div class="location">
+                    <p>East Village, Mumbai</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="room-card" data-city="NoMad, Mumbai" data-budget="1900" data-type="Private Room" onclick="window.location.href='room-detail.html?room=Arnav&price=1,900&city=Mumbai'">
+            <div class="room-name">
+                <div class="user-profile">
+                    <img src="images/ayesha1.jpg" alt="Brent's Profile Photo" class="profile-img">
+                </div>
+                <h3>Arnav, 39</h3>
+            </div>
+            <div class="room-image-container">
+                <img src="images/brent1.jpeg" alt="Brent's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$1,900 / mo</p>
+                <p class="type">Private Room · 6 Bedrooms · Apartment</p>
+                <div class="location">
+                    <p>NoMad, Mumbai</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="room-card" data-city="East Village, Mumbai" data-budget="2050" data-type="Private Room" onclick="window.location.href='room-detail.html?room=Ojasvee&price=2,050&city=Mumbai'">
+            <div class="room-name">
+                <div class="user-profile">
+                    <img src="images/rahul2.jpg" alt="Maurice's Profile Photo" class="profile-img">
+                </div>
+                <h3>Ojasvee, 32</h3>
+            </div>
+            <div class="room-image-container">
+                <img src="images/sydney1.jpeg" alt="Maurice's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$2,050 / mo</p>
+                <p class="type">Private Room · 3 Bedrooms · Apartment</p>
+                <div class="location">
+                    <p>East Village, Mumbai</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="room-card" data-city="Upper East Side, Mumbai" data-budget="3150" data-type="Entire Place" onclick="window.location.href='room-detail.html?room=Aditi&price=3,150&city=Mumbai'">
+            <div class="room-name">
+                <div class="user-profile">
+                    <img src="images/ayesha3.jpg" alt="Sydney's Profile Photo" class="profile-img">
+                </div>
+                <h3>Aditi, 29</h3>
+            </div>
+            <div class="room-image-container">
+                <img src="images/sydney1.jpeg" alt="Sydney's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$3,150 / mo</p>
+                <p class="type">Entire Place · 1 Bedroom · Apartment</p>
+                <div class="location">
+                    <p>Upper East Side, Mumbai</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="room-card" data-city="Crown Heights, Pune" data-budget="1400" data-type="Private Room" onclick="window.location.href='room-detail.html?room=Shreya&price=1,400&city=Pune'">
+            <div class="room-name">
+                <div class="user-profile">
+                    <img src="images/rahul4.jpg" alt="Ivana's Profile Photo" class="profile-img">
+                </div>
+                <h3>Shreya, 30</h3>
+            </div>
+            <div class="room-image-container">
+                <img src="images/ivana1.jpeg" alt="Ivana's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$1,400 / mo</p>
+                <p class="type">Private Room · 4 Bedrooms · Apartment</p>
+                <div class="location">
+                    <p>Crown Heights, Pune</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="room-card" data-city="Upper East Side, Mumbai" data-budget="3150" data-type="Entire Place" onclick="window.location.href='room-detail.html?room=Aditi&price=3,150&city=Mumbai'">
+            <div class="room-name">
+                <div class="user-profile">
+                    <img src="images/ayesha3.jpg" alt="Sydney's Profile Photo" class="profile-img">
+                </div>
+                <h3>Aditi, 29</h3>
+            </div>
+            <div class="room-image-container">
+                <img src="images/maurice1.jpeg" alt="Sydney's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$3,150 / mo</p>
+                <p class="type">Entire Place · 1 Bedroom · Apartment</p>
+                <div class="location">
+                    <p>Upper East Side, Mumbai</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="room-card" data-city="East Village, Mumbai" data-budget="2050" data-type="Private Room" onclick="window.location.href='room-detail.html?room=Ojasvee&price=2,050&city=Mumbai'">
+            <div class="room-name">
+                <div class="user-profile">
+                    <img src="images/rahul2.jpg" alt="Maurice's Profile Photo" class="profile-img">
+                </div>
+                <h3>Ojasvee, 32</h3>
+            </div>
+            <div class="room-image-container">
+                <img src="images/ivana1.jpeg" alt="Maurice's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$2,050 / mo</p>
+                <p class="type">Private Room · 3 Bedrooms · Apartment</p>
+                <div class="location">
+                    <p>East Village, Mumbai</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="room-card" data-city="Upper East Side, Mumbai" data-budget="3150" data-type="Entire Place" onclick="window.location.href='room-detail.html?room=Niharika&price=3,150&city=Mumbai'">
+            <div class="room-name">
+                <div class="user-profile">
+                    <img src="images/ayesha3.jpg" alt="Sydney's Profile Photo" class="profile-img">
+                </div>
+                <h3>Niharika, 29</h3>
+            </div>
+            <div class="room-image-container">
+                <img src="images/sydney1.jpeg" alt="Sydney's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$3,150 / mo</p>
+                <p class="type">Entire Place · 1 Bedroom · Apartment</p>
+                <div class="location">
+                    <p>Upper East Side, Mumbai</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="room-card" data-city="NoMad, Mumbai" data-budget="1900" data-type="Private Room" onclick="window.location.href='room-detail.html?room=Brent&price=1,900&city=Mumbai'">
+            <div class="room-name">
+                <div class="user-profile">
+                    <img src="images/ayesha1.jpg" alt="Brent's Profile Photo" class="profile-img">
+                </div>
+                <h3>Brent, 39</h3>
+            </div>
+            <div class="room-image-container">
+                <img src="images/brent1.jpeg" alt="Brent's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$1,900 / mo</p>
+                <p class="type">Private Room · 6 Bedrooms · Apartment</p>
+                <div class="location">
+                    <p>NoMad, Mumbai</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="room-card" data-city="East Village, Mumbai" data-budget="2050" data-type="Private Room" onclick="window.location.href='room-detail.html?room=Maurice&price=2,050&city=Mumbai'">
+            <div class="room-name">
+                <div class="user-profile">
+                    <img src="images/rahul2.jpg" alt="Maurice's Profile Photo" class="profile-img">
+                </div>
+                <h3>Maurice, 32</h3>
+            </div>
+            <div class="room-image-container">
+                <img src="images/maurice1.jpeg" alt="Maurice's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$2,050 / mo</p>
+                <p class="type">Private Room · 3 Bedrooms · Apartment</p>
+                <div class="location">
+                    <p>East Village, Mumbai</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="room-card" data-city="Crown Heights, Pune" data-budget="1400" data-type="Private Room" onclick="window.location.href='room-detail.html?room=Rutuja&price=1,400&city=Pune'">
+            <div class="room-name">
+                <div class="user-profile">
+                    <img src="images/rahul4.jpg" alt="Ivana's Profile Photo" class="profile-img">
+                </div>
+                <h3>Rutuja, 50</h3>
+            </div>
+            <div class="room-image-container">
+                <img src="images/ivana1.jpeg" alt="Ivana's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$1,400 / mo</p>
+                <p class="type">Private Room · 4 Bedrooms · Apartment</p>
+                <div class="location">
+                    <p>Crown Heights, Pune</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="room-card" data-city="Upper East Side, Mumbai" data-budget="3150" data-type="Entire Place" onclick="window.location.href='room-detail.html?room=Sydney&price=3,150&city=Mumbai'">
+            <div class="room-name">
+                <div class="user-profile">
+                    <img src="images/ayesha3.jpg" alt="Sydney's Profile Photo" class="profile-img">
+                </div>
+                <h3>Sydney, 29</h3>
+            </div>
+            <div class="room-image-container">
+                <img src="images/sydney1.jpeg" alt="Sydney's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$3,150 / mo</p>
+                <p class="type">Entire Place · 1 Bedroom · Apartment</p>
+                <div class="location">
+                    <p>Upper East Side, Mumbai</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="room-card" data-city="Crown Heights, Pune" data-budget="1400" data-type="Private Room" onclick="window.location.href='room-detail.html?room=Sakshi&price=1,400&city=Pune'">
+            <div class="room-name">
+                <div class="user-profile">
+                    <img src="images/rahul4.jpg" alt="Ivana's Profile Photo" class="profile-img">
+                </div>
+                <h3>Sakshi, 20</h3>
+            </div>
+            <div class="room-image-container">
+                <img src="images/ivana1.jpeg" alt="Ivana's Room">
+            </div>
+            <div class="room-details">
+                <p class="price">$1,400 / mo</p>
+                <p class="type">Private Room · 4 Bedrooms · Apartment</p>
+                <div class="location">
+                    <p>Crown Heights, Pune</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- No Rooms Message -->
+    <p id="noRoomsMessage" style="display: none; text-align: center; color: #ff4d4d; font-size: 1.2rem; margin-top: 10px;">
+        ❌ No rooms found.
+    </p>
+
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+            <h3>RoomSync</h3>
+            <p>Find the perfect home and roommate with our AI-driven matching system. Safe, fast, and stress-free.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Rooms</a></li>
+                <li><a href="#">Roommates</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Support Section -->
+        <div class="footer-support">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Safety Tips</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="/RoomSync/frontend/images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="/RoomSync/frontend/images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="/RoomSync/frontend/images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="frontend/images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 RoomSync. All rights reserved.</p>
+    </div>
+</footer>
+    <script src="roomlisting.js"></script>
+</body>
+</html>

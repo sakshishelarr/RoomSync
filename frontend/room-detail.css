@@ -1,0 +1,269 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  font-family: 'Poppins';
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;  /* Align logo to the left and nav-links to the center */
+  align-items: center;
+  padding: 15px 30px;
+  width: 100%;
+  position: relative;
+  background-color: white;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds space between icon & text */
+}
+
+/* Adjust logo image size */
+.logo img {
+  height: 40px;
+}
+
+.logo span {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Style for Nav Links */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Spacing between links */
+  width: 100%;  /* Ensures the links take up available space */
+  position: absolute;  /* This centers the links in the available space */
+  left: 50%;  /* Position the links at the center of the navbar */
+  transform: translateX(-50%);  /* Shift them back by 50% to truly center */
+}
+
+/* Nav link styles */
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 1.1rem;
+  position: relative;
+  padding-bottom: 5px; /* Creates space for the underline */
+}
+
+/* Underline Effect */
+.nav-links a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(to right, #000a14, #0681a3); /* Gradient color */
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Expand on Hover */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Room Detail Section */
+.room-detail-section {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.room-detail-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%; /* Ensure full use of available width up to 1200px */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Room Image Gallery */
+.room-images {
+  display: flex;
+  gap: 20px; /* Creates space between the main image and thumbnails */
+  margin-bottom: 15px;
+}
+
+/* Main Image */
+.main-image-container {
+  flex: 1; /* Main image takes up more space */
+  max-width: 585px;
+}
+
+.main-image {
+  width: 585px; /* Fixed width */
+  height: 390px; /* Fixed height */
+  border-radius: 0px; /* Added border radius for smooth corners */
+}
+
+/* Room Thumbnails */
+.room-images-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 10px; /* Creates space between images */
+  max-width: 550px; /* Adjusted width for thumbnail container */
+}
+
+/* Thumbnail Images */
+.room-images-gallery img.thumbnail {
+  width: 300px; /* Thumbnails will take up 100% of their column width */
+  height: 190px; /* Fixed height for thumbnails */
+  border-radius: 0px; /* Smooth corners */
+  object-fit: cover; /* Ensures the images are cropped and fill their container */
+  cursor: pointer;
+}
+
+/* Room Information and Posted By Layout */
+.room-info-posted-by {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.room-info {
+  flex: 1;
+}
+
+.posted-by-box {
+  background-color: #f4f4f4;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.posted-by-box p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.chat-button {
+  background: linear-gradient(to right, #000a14, #0681a3);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.chat-button:hover {
+  transform: scale(1.05);
+}
+
+
+/* Room Information */
+.room-info {
+  margin-top: 20px;
+}
+
+.room-details {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Stack each row vertically */
+}
+
+#room-title {
+  margin-bottom: 15px;
+}
+
+.room-details .rent-row,
+.room-details .available-row,
+.room-details .type-row,
+.room-details .layout-row,
+.room-details .deposit-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-size: 0.8rem;
+  color: #aaa; /* Grey for labels */
+  font-weight: 500;
+  margin-right: 10px; /* Space between label and value */
+}
+
+.value {
+  font-size: 0.8rem;
+  color: #000;
+  font-weight: bold;
+  
+}
+
+/* Separator */
+.separator {
+  margin-right: 450px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  border: 0;
+  border-top: 1px solid #ddd;
+
+}
+
+/* Description Section */
+.room-description h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.room-description p {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+/* Amenities Section */
+.room-amenities {
+  margin-top: 20px;
+}
+
+.room-amenities h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 700px;
+}
+
+.amenity {
+  background-color: #f1f1f1;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #333;
+}
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Detail | RoomSync</title>
+    <link rel="stylesheet" href="room-detail.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- Logo - Left -->
+        <div class="logo">
+            <img src="images/logo.png" alt="RoomSync Logo">
+            <span>RoomSync</span>
+        </div>
+    
+        <!-- Centered Navigation Links -->
+        <div class="nav-links">
+            <a href="roomlisting.html">Rooms</a>
+            <a href="roommate_profiles.html">Roommates</a>
+        </div>
+    
+    </nav>
+
+      <!-- Room Detail Section -->
+    <section class="room-detail-section">
+      <div class="room-detail-container">
+          <!-- Room Image Gallery -->
+          <div class="room-images">
+              <!-- Main Image -->
+              <div class="main-image-container">
+                  <img id="room-img" class="main-image" src="images/ivana1.jpeg" alt="Room Image">
+              </div>
+              
+              <!-- Room Image Thumbnails -->
+              <div class="room-images-gallery">
+                  <img class="thumbnail" src="images/maurice1.jpeg" alt="Room Image">
+                  <img class="thumbnail" src="images/sydney1.jpeg" alt="Room Image">
+                  <img class="thumbnail" src="images/sydney1.jpeg" alt="Room Image">
+                  <img class="thumbnail" src="images/sydney1.jpeg" alt="Room Image">
+              </div>
+          </div>
+
+          <!-- Room Information -->
+          <div class="room-info">
+            <h2 id="room-title">Tejas's place in <span class="city-name">Mumbai</span></h2> <!-- Room name will be dynamically updated here -->
+
+            <div class="room-details">
+                <!-- Rent Row -->
+                <div class="rent-row">
+                    <div class="label">RENT</div>
+                    <div class="value room-price">$2,150 / mo</div>
+                </div>
+
+                <!-- Available Row -->
+                <div class="available-row">
+                    <div class="label">AVAILABLE</div>
+                    <div class="value">May 1, 2025 - 12 Months</div>
+                </div>
+
+                <!-- Type Row -->
+                <div class="type-row">
+                    <div class="label">TYPE</div>
+                    <div class="value">Private Room · 2 Bedrooms · Apartment</div>
+                </div>
+
+                <!-- Layout Row -->
+                <div class="layout-row">
+                    <div class="label">LAYOUT</div>
+                    <div class="value">2 Bedrooms · 1 Bath</div>
+                </div>
+
+                <!-- Deposit Row -->
+                <div class="deposit-row">
+                    <div class="label">DEPOSIT</div>
+                    <div class="value">$2,150</div>
+                </div>
+            </div>
+
+            <hr class="separator">
+
+            <!-- Description -->
+            <div class="room-description">
+                <h3>Description</h3>
+                <p>
+                    The apartment is located in a great area of Gramercy, 2-bed/1-bath, garden-level duplex with a huge private backyard with a BBQ that requires some upkeep - green thumbs welcome! Most of the apartment is fully furnished (but open to changing things up), except for the available bedroom, which is empty and approximately 8' x 12.5'. The room comes with its own closet, plus an additional large hallway closet for extra storage.
+                </p>
+            </div>
+
+            <hr class="separator">
+
+            <!-- Amenities Section -->
+            <div class="room-amenities">
+              <h3>Amenities</h3>
+              <div class="amenities">
+                  <span class="amenity">TV</span>
+                  <span class="amenity">Outdoor space</span>
+                  <span class="amenity">BBQ grill</span>
+                  <span class="amenity">Must climb stairs</span>
+                  <span class="amenity">Carbon monoxide</span>
+                  <span class="amenity">Smoke alarm</span>
+                  <span class="amenity">Balcony</span>
+              </div>
+          </div>
+
+          <hr class="separator">
+
+          <!-- Posted By Section -->
+          <div class="posted-by-box">
+            <p><strong>Posted by:</strong> Tejas</p>
+            <p><strong>Age:</strong> 30</p>
+            <p><strong>Today</strong></p>
+            <button class="chat-button">Start a chat</button>
+        </div>
+        </div>
+    </div>
+
+  </section>
+    <script src="room-detail.js"></script>
+</body>
+</html>
