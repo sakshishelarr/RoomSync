@@ -11,6 +11,7 @@ RoomSync is a full-stack web application that helps users find ideal roommates a
 ---
 
 ## 📂 Project Structure
+```bash
 RoomSync/
 ├── backend/ # Express.js API
 │ ├── models/ # Mongoose schemas
@@ -28,7 +29,7 @@ RoomSync/
 │ └── *.js
 │
 ├── README.md
-
+```
 
 ---
 
