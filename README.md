@@ -1,51 +1,85 @@
 # 🏠 RoomSync
 
-RoomSync is a web-based platform that helps users find compatible roommates and available rooms with ease. It uses smart filtering, detailed profiles, and in-app messaging to streamline the process of finding a room or roommate, making the experience seamless and stress-free.
+RoomSync is a full-stack web application that helps users find ideal roommates and available rooms effortlessly. It combines detailed filters, profile matching, and in-app messaging to make the room/roommate search experience smooth, smart, and personalized.
 
 ---
 
-## 🌟 Features
+## 🌐 Live Demo
 
-- 🔍 **Smart Filters** — Filter by location, budget, room type, and amenities
-- 🧠 **AI Matching** — Connect with compatible roommates based on preferences and lifestyle
-- 🏡 **Real-Time Room Listings** — View updated listings with layout, availability, and rent
-- 💬 **In-App Chat** — Start conversations with potential roommates securely
-- 🖼️ **Virtual Room Tours** — Preview rooms using images before visiting
-- 👥 **Detailed Profiles** — Learn about roommate habits, dietary preferences, and more
+> _Coming soon_ or replace with: [Live App](https://your-deployed-url.com)
 
 ---
 
-## 🛠 Technologies Used
-
-- **Frontend**: HTML, CSS, JavaScript
-- **Icons**: Font Awesome
-- **Fonts**: Google Fonts (Poppins)
-- **Styling**: Flexbox, Grid Layout
-- **Hosting**: GitHub Pages or Local
-
----
-
-## 📁 Project Structure
-
+## 📂 Project Structure
 RoomSync/
-├── frontend/
-│ ├── images/
+├── backend/ # Express.js API
+│ ├── models/ # Mongoose schemas
+│ ├── routes/ # API endpoints
+│ ├── middleware/ # Custom middleware (e.g., auth)
+│ ├── .env # Environment config
+│ ├── package.json # Dependencies
+│ └── server.js # Entry point
+│
+├── frontend/ # Static HTML/CSS/JS Frontend
 │ ├── roomlisting.html
-│ ├── roommate_profiles.html
 │ ├── room-detail.html
-│ ├── roomlisting.css
-│ └── roommates.js
+│ ├── roommate_profiles.html
+│ ├── *.css
+│ └── *.js
+│
 ├── README.md
 
 
 ---
 
+## 🛠 Tech Stack
+
+**Frontend**
+- HTML5, CSS3 (Flexbox, Grid)
+- JavaScript
+- Font Awesome
+- Google Fonts
+
+**Backend**
+- Node.js
+- Express.js
+- MongoDB (via Mongoose)
+- dotenv for config
+
+---
+
+## 🌟 Key Features
+
+- 🔍 Smart filters for location, budget, type, and lifestyle
+- 🤖 JWT Authentication
+- 🧾 Real-time room and roommate listings
+- 💬 Built-in chat system
+- 📸 Room and profile photo previews
+- 🔐 Backend-ready to support secure user login and data handling
+
+---
+
 ## 🚀 Getting Started
 
-1. **Clone the Repository**  
-```bash
-git clone https://github.com/yourusername/roomsync.git
-cd roomsync
-'''
-2. **Run Locally**
-Open roomlisting.html in your browser to start using RoomSync.
+1. **Clone this Repository**
+    ```bash
+        git clone https://github.com/sakshishelarr/RoomSync.git
+        cd RoomSync
+
+2. **Setup Backend**
+    ```bash
+    cd backend
+    npm install
+    # Create a `.env` file with MONGO_URI and PORT
+    npm start
+
+3. **Start the server**
+  ```bash
+  node server.js
+  Open frontend/index.html in your browser (or use Live Server).
+```
+---
+
+## Credits:
+- Designed and built by **@sakshishelarr** 
+---
