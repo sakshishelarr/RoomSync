@@ -78,7 +78,7 @@ RoomSync/
     ```bash
       node server.js
       Open frontend/index.html in your browser (or use Live Server).
-```
+
 ---
 
 ## Credits:
