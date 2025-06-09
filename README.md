@@ -6,7 +6,7 @@ RoomSync is a full-stack web application that helps users find ideal roommates a
 
 ## 🌐 Live Demo
 
-> _Coming soon_ or replace with: [Live App](https://your-deployed-url.com)
+> room-sync-gamma.vercel.app
 
 ---
 
@@ -75,9 +75,9 @@ RoomSync/
     npm start
 
 3. **Start the server**
-  ```bash
-  node server.js
-  Open frontend/index.html in your browser (or use Live Server).
+    ```bash
+      node server.js
+      Open frontend/index.html in your browser (or use Live Server).
 ```
 ---
 
